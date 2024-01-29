@@ -1,10 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Jose G Barrera
 % 20240125
-% This code uses the ODE Toolkit and provided website example to simulate 
-% the heat transfer of a 2024-T3 AL (1m x 0.5m x 0.01m).
-% Only meant as an approximation. 
-% Please have PDE Toolbox Installed.
+% The purpose of this code is to complete a 1st order approximation of
+% metal vibrations due to an external force. The approximation is modeled
+% After a Spring-mass-damped system (Metal) and external force (rocket)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Defining system constants, Note: Damping coefficients taken from 
