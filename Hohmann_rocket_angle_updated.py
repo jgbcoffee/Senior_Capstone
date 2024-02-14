@@ -120,19 +120,26 @@ ani = FuncAnimation(fig, animate, frames=len(t), init_func=init, interval=20, bl
 # ani.save('rocket_from_Moon_to_mars_updated.gif', writer='imagemagick', fps=30)
 plt.show()
 
-# Conversion factor from seconds to days
-seconds_in_a_day = 86400
-
-# Convert time array from seconds to days
-t_days = t / seconds_in_a_day
-
 # Calculate angles and distances for each time step
-angles = np.arctan2(y_transfer + y_earth[0] - y_earth, x_transfer + x_earth[0] - x_earth) * (180 / np.pi)
-distances = np.sqrt((x_transfer - x_earth)**2 + (y_transfer - y_earth)**2)
+angles = np.arctan2(y_transfer + y_earth[0], x_transfer + x_earth[0]) * (180 / np.pi)
+
+rocket_distances = []
+for i in range(len(t)):
+    if i < np.argmin(np.sqrt((x_transfer + x_earth[0] - x_mars)**2 + (y_transfer + y_earth[0] - y_mars)**2)):
+        rocket_x = x_transfer[i] + x_earth[0]
+        rocket_y = y_transfer[i] + y_earth[0]
+    else:
+        rocket_x = x_mars[i]
+        rocket_y = y_mars[i]
+    
+    dx = rocket_x - x_earth[i]
+    dy = rocket_y - y_earth[i]
+    distance = np.sqrt(dx**2 + dy**2)
+    rocket_distances.append(distance)
 
 # Plot angle vs. time in days
 plt.figure(figsize=(10, 5))
-plt.plot(t_days, angles, label='Angle vs Time')
+plt.plot(t / (24 * 3600), angles, label='Angle vs Time')
 plt.xlabel('Time (days)')
 plt.ylabel('Angle (degrees)')
 plt.title('Angle between Rocket and Earth over Time')
@@ -142,11 +149,10 @@ plt.show()
 
 # Plot distance vs. time in days
 plt.figure(figsize=(10, 5))
-plt.plot(t_days, distances, label='Distance vs Time')
+plt.plot(t / (24 * 3600), rocket_distances) 
+plt.title('Distance Between Rocket and Earth Over Time')
 plt.xlabel('Time (days)')
 plt.ylabel('Distance (m)')
-plt.title('Distance between Rocket and Earth over Time')
-plt.legend()
 plt.grid(True)
 plt.show()
 
