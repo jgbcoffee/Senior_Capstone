@@ -1,8 +1,9 @@
 ###############################################################################################################################
 # Jose G. Barrera
-# Date: 20240128
+# Date: 20240214
 
 # The purpose of this code is to simulate the Hohmann stransfer orbit from Earth's moon to Mars. 
+# This code differs from the last hohmann transfer code in measuring the angle and distance between the rocket and earth.
 # Some things to note, typically, the ideal phase angle of Mars is 44.36 degrees (Mars position relative to the Sun and Earth)
 # In this code, however, I used 44.75 degrees to get the rocket to intercept with Mars
 # This discrepancy in degrees can be attributed to the fact that Earth and mars dont orbit the sun in perfect circles.
