@@ -121,7 +121,7 @@ ani = FuncAnimation(fig, animate, frames=len(t), init_func=init, interval=20, bl
 plt.show()
 
 # Calculate angles and distances for each time step
-angles = np.arctan2(y_transfer + y_earth[0], x_transfer + x_earth[0]) * (180 / np.pi)
+angles = np.arctan2(y_transfer + y_earth[0] - y_earth, x_transfer + x_earth[0] - x_earth) * (180 / np.pi)
 
 rocket_distances = []
 for i in range(len(t)):
