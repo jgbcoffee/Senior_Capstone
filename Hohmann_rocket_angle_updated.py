@@ -128,7 +128,7 @@ t_days = t / seconds_in_a_day
 
 # Calculate angles and distances for each time step
 angles = np.arctan2(y_transfer + y_earth[0] - y_earth, x_transfer + x_earth[0] - x_earth) * (180 / np.pi)
-distances = np.sqrt((x_transfer + x_earth[0] - x_earth)**2 + (y_transfer + y_earth[0] - y_earth)**2)
+distances = np.sqrt((x_transfer - x_earth)**2 + (y_transfer - y_earth)**2)
 
 # Plot angle vs. time in days
 plt.figure(figsize=(10, 5))
