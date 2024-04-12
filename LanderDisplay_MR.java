@@ -73,7 +73,7 @@ class RangeView extends JPanel {
     private ScenePoly left_pad, right_pad;
     private ScenePoly left_L1,  right_L1;
     private ScenePoly left_L2,  right_L2;
-    private ScenePoly left_L3,  right_L3;
+    private ScenePoly left_Rocket,  right_Rocket;
     private ScenePoly left_L4,  right_L4;
     private ScenePoly fuselage;
     private ScenePoly nozzle;
@@ -154,19 +154,19 @@ class RangeView extends JPanel {
         right_L2.y  = new double[] { -0.95, -1.0, -1.28,-1.25};
         right_L2.n = 4;
         
-/* Stage 1 rockets are left_L3 and right_L3
+/* Stage 1 rockets are left_Rocket and right_Rocket
     
-        left_L3 = new ScenePoly();
-        left_L3.color = new Color(50,50,50);
-        left_L3.x = new double[] {-1.2, -1.2, -1.575, -1.575, -1.45, -1.325};
-        left_L3.y  = new double[] {5.375, -1.125, -1.125, 5.375, 5.875, 5.875};
-        left_L3.n = 6;
+        left_Rocket = new ScenePoly();
+        left_Rocket.color = new Color(50,50,50);
+        left_Rocket.x = new double[] {-1.2, -1.2, -1.575, -1.575, -1.45, -1.325};
+        left_Rocket.y  = new double[] {5.375, -1.125, -1.125, 5.375, 5.875, 5.875};
+        left_Rocket.n = 6;
 
-        right_L3 = new ScenePoly();
-        right_L3.color = new Color(50,50,50);
-        right_L3.x = new double[] {1.2, 1.2, 1.575, 1.575, 1.45, 1.325};
-        right_L3.y = new double[] {5.375, -1.125, -1.125, 5.375, 5.875, 5.875};
-        right_L3.n = 6;
+        right_Rocket = new ScenePoly();
+        right_Rocket.color = new Color(50,50,50);
+        right_Rocket.x = new double[] {1.2, 1.2, 1.575, 1.575, 1.45, 1.325};
+        right_Rocket.y = new double[] {5.375, -1.125, -1.125, 5.375, 5.875, 5.875};
+        right_Rocket.n = 6;
 
         left_L4 = new ScenePoly();
         left_L4.color = new Color(100,100,100);
@@ -385,8 +385,8 @@ class RangeView extends JPanel {
         drawScenePoly(g2d, right_L1, landerAngle, landerPos[0], landerPos[1]);
         drawScenePoly(g2d, left_L2, landerAngle, landerPos[0], landerPos[1]);
         drawScenePoly(g2d, right_L2, landerAngle, landerPos[0], landerPos[1]);
-        drawScenePoly(g2d, left_L3, landerAngle, landerPos[0], landerPos[1]);
-        drawScenePoly(g2d, right_L3, landerAngle, landerPos[0], landerPos[1]);
+        drawScenePoly(g2d, left_Rocket, landerAngle, landerPos[0], landerPos[1]);
+        drawScenePoly(g2d, right_Rocket, landerAngle, landerPos[0], landerPos[1]);
         drawScenePoly(g2d, left_L4, landerAngle, landerPos[0], landerPos[1]);
         drawScenePoly(g2d, right_L4, landerAngle, landerPos[0], landerPos[1]);
         drawScenePoly(g2d, fuselage, landerAngle, landerPos[0], landerPos[1]);
