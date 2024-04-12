@@ -1,6 +1,7 @@
 /*
  * Trick
  * 2020 (c) National Aeronautics and Space Administration (NASA)
+ * Modifications made by Jose G. Barrera to showcase a 2-Stage Rocket
  */
 
 import java.awt.Color;
@@ -154,8 +155,9 @@ class RangeView extends JPanel {
         right_L2.y  = new double[] { -0.95, -1.0, -1.28,-1.25};
         right_L2.n = 4;
         
-/* Stage 1 rockets are left_Rocket and right_Rocket
-    
+/*
+* Stage 1 rockets are left_Rocket and right_Rocket
+*/   
         left_Rocket = new ScenePoly();
         left_Rocket.color = new Color(50,50,50);
         left_Rocket.x = new double[] {-1.2, -1.2, -1.575, -1.575, -1.45, -1.325};
