@@ -153,7 +153,9 @@ class RangeView extends JPanel {
         right_L2.x = new double[]  { 1.0, 1.0, 1.75, 1.84};
         right_L2.y  = new double[] { -0.95, -1.0, -1.28,-1.25};
         right_L2.n = 4;
-
+        
+/* Stage 1 rockets are left_L3 and right_L3
+    
         left_L3 = new ScenePoly();
         left_L3.color = new Color(50,50,50);
         left_L3.x = new double[] {-1.2, -1.2, -1.575, -1.575, -1.45, -1.325};
