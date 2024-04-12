@@ -156,14 +156,14 @@ class RangeView extends JPanel {
 
         left_L3 = new ScenePoly();
         left_L3.color = new Color(50,50,50);
-        left_L3.x = new double[] {-1.25, -1.2, -1.575, -1.575, -1.45, -1.325};
-        left_L3.y  = new double[] { -0.15, -0.25, -0.53, -1.28, -1.25, -0.46};
+        left_L3.x = new double[] {-1.2, -1.2, -1.575, -1.575, -1.45, -1.325};
+        left_L3.y  = new double[] {5.375, -1.125, -1.125, 5.375, 5.875, 5.875};
         left_L3.n = 6;
 
         right_L3 = new ScenePoly();
         right_L3.color = new Color(50,50,50);
-        right_L3.x = new double[] {1.25, 1.2, 1.575, 1.575, 1.45, 1.325};
-        right_L3.y = new double[] {0.375, -1.125, -1.125, 0.375, 0.875, 0.875};
+        right_L3.x = new double[] {1.2, 1.2, 1.575, 1.575, 1.45, 1.325};
+        right_L3.y = new double[] {5.375, -1.125, -1.125, 5.375, 5.875, 5.875};
         right_L3.n = 6;
 
         left_L4 = new ScenePoly();
